@@ -1,0 +1,91 @@
+body {
+  font-family: sans-serif;
+  color: red;
+  height: 88vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bgimg {
+  width: 100%;
+  height: 100%;
+  background-image: url(spider.jpg);
+  background-size: cover;
+}
+
+#img {
+  background-color: red;
+  float: right;
+  margin-right: 40px;
+  margin-top: 25px;
+  cursor: grab;
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  float: right;
+  /* padding-right: 20px; */
+}
+
+nav {
+  background-color: black;
+  height: 80px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+  padding-left: 40px;
+}
+
+li {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 80px;
+  padding-right: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* border-bottom: 1px solid red; */
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  border: 1px solid transparent;
+}
+
+a:hover {
+  border: 1px solid white;
+}
+
+@media (max-width: 900px) {
+  ul {
+    position: fixed;
+    width: 40%;
+    text-align: center;
+    background: black;
+    right: -100%;
+    transition: all 300ms ease-in-out;
+  }
+
+  li {
+    display: block;
+    margin: 50px;
+    line-height: 30px;
+  }
+
+  ul.show {
+    right: 8px;
+  }
+
+  #img {
+    display: block;
+  }
+
+  #img.show {
+    transform: rotate(90deg);
+  }
+}
